@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f7ff, #cfd8ff);
+    color: #333;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header */
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #4a4a4a;
+}
+
+/* Buttons */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #004099;
+    transform: translateY(1px);
+}
+
+/* Form Inputs */
+form input{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #007BFF;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Flashcard Styles */
+.flashcard {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    perspective: 1000px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flashcard .front, .flashcard .back {
+    display: block;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flashcard .back {
+    background-color: #007BFF;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Abstract Backgrounds for Different Pages */
+body.index-page {
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+}
+
+body.main-menu-page {
+    background: linear-gradient(135deg, #FFD3A5, #FD6585);
+}
+
+body.saved-items-page {
+    background: linear-gradient(135deg, #FECFEF, #FFABAB);
+}
+
+body.input-words-page {
+    background: linear-gradient(135deg, #D4FC79, #96E6A1);
+}
+
+body.translate-page {
+    background: linear-gradient(135deg, #84FAB0, #8FD3F4);
+}
+
+body.flashcards-page {
+    background: linear-gradient(135deg, #FF9A8B, #FF6A88, #FF99AC);
+}
+
+body.quiz-page {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+/* Add subtle animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 0.8s ease-in-out;
+}

@@ -1,0 +1,19 @@
+<web-app>
+    <servlet>
+        <servlet-name>SaveWordServlet</servlet-name>
+        <servlet-class>com.example.SaveWordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaveWordServlet</servlet-name>
+        <url-pattern>/save-word</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RetrieveSavedItemsServlet</servlet-name>
+        <servlet-class>com.example.RetrieveSavedItemsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RetrieveSavedItemsServlet</servlet-name>
+        <url-pattern>/retrieve-saved-items</url-pattern>
+    </servlet-mapping>
+</web-app>
